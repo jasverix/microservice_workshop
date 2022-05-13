@@ -10,8 +10,8 @@ namespace RentalOffer.Monitor
     {
         static void Main(string[] args)
         {
-            string host = args[0];
-            string port = args[1];
+            string host = "toyota";
+            string port = "5672";
 
             var rapidsConnection = new RabbitMqRapids("monitor_in_csharp", host, port);
             var river = new River(rapidsConnection);
