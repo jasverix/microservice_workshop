@@ -43,4 +43,4 @@ class MonitorAll
 
 end
 
-MonitorAll.new(ARGV.shift, ARGV.shift.to_i).start
+MonitorAll.new("172.27.242.200", "5672").start

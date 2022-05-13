@@ -32,10 +32,7 @@ namespace RentalOffer.Need
             }
         }
 
-        private static string NeedPacket()
-        {
-            return
-                "{\"need\":\"car_rental_offer\"}";
-        }
+        private static string NeedPacket() 
+            => "{\"need\":\"car_rental_offer\"}";
     }
 }

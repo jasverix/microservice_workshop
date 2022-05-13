@@ -3,7 +3,7 @@ GEM
     amq-protocol (2.1.0)
     bunny (2.6.4)
       amq-protocol (>= 2.0.1)
-    json (2.0.3)
+    json (2.6.1)
 
 PLATFORMS
   ruby
