@@ -3,6 +3,8 @@
 *.user
 *.cache
 *.sln.docstates
+
+.idea
  
 # Build results
  
