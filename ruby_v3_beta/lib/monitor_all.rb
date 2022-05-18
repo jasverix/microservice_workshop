@@ -23,7 +23,7 @@ class MonitorAll
     # @river.forbid("key1", "key2");    # Reject packet if it does have key1 or key2
     # @river.interested_in("key1", "key2");  // Allows key1 and key2 to be queried and set in a packet
     # For any keys required, forbidden, or deemed interesting, accessor methods are created in Packet
-@service_name = 'monitor_all_ruby_' + SecureRandom.uuid
+    @service_name = 'monitor_all_ruby_' + SecureRandom.uuid
   end
 
   def start
@@ -31,11 +31,11 @@ class MonitorAll
     @river.register(self)
   end
 
-  def packet rapids_connection, packet, warnings
+  def packet(rapids_connection, packet, warnings)
     puts " [*] #{warnings}"
   end
 
-  def on_error rapids_connection, errors
+  def on_error(rapids_connection, errors)
     puts " [x] #{errors}"
   end
 

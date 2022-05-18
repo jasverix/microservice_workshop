@@ -7,7 +7,6 @@
 package com.nrkei.microservices.car_rental_offer
 
 import com.nrkei.microservices.rapids_rivers.Packet
-import java.util.HashMap
 import com.nrkei.microservices.rapids_rivers.RapidsConnection
 import com.nrkei.microservices.rapids_rivers.rabbit_mq.RabbitMqRapids
 
@@ -39,11 +38,6 @@ class Need {
 
         }
 
-        private fun needPacket(): Packet {
-            val jsonMap = HashMap<String, Any>()
-            jsonMap["need"] = "car_rental_offer"
-            return Packet(jsonMap)
-        }
-
+        private fun needPacket(): Packet = Packet(hashMapOf("need" to "car_rental_offer") as Map<String, Any>?)
     }
 }

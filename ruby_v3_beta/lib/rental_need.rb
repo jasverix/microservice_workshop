@@ -17,7 +17,7 @@ class RentalNeed
 
   NEED = 'car_rental_offer'
 
-def initialize(host_ip, port)
+  def initialize(host_ip, port)
     @rapids_connection = RapidsRivers::RabbitMqRapids.new(host_ip, port)
     @service_name = 'rental_need_ruby_' + SecureRandom.uuid
   end
@@ -33,8 +33,7 @@ def initialize(host_ip, port)
   private
 
     def need_packet
-      fields = { need: NEED }
-      RapidsRivers::Packet.new fields
+      RapidsRivers::Packet.new({ need: NEED })
     end
 
 end
